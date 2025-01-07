@@ -32,7 +32,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		// We don't need CSRF for this example
-		http.csrf().disable()
+		http.csrf().and()
 				// dont authenticate this particular request
 				.authorizeRequests().antMatchers(FLIGHT_API+"authenticate",FLIGHT_API+"register",FLIGHT_API+"forgotPassword").permitAll().antMatchers(HttpMethod.OPTIONS, "/**")
 				.permitAll()
