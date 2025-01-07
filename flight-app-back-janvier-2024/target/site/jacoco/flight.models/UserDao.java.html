@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserDao.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">flight-app-back</a> &gt; <a href="index.source.html" class="el_package">flight.models</a> &gt; <span class="el_source">UserDao.java</span></div><h1>UserDao.java</h1><pre class="source lang-java linenums">package flight.models;
+
+import java.util.Set;
+
+import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
+@Table(name = &quot;user&quot;)
+<span class="nc" id="L11">public class UserDao {</span>
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
+	@Column(unique=true)
+	private String username;
+	@Column
+	@JsonIgnore
+	private String password;
+	@Column
+	@JsonIgnore
+	private String confpassword;
+	@Column
+	private String email;
+	@Column(name = &quot;reset_token&quot;,nullable=true)
+	private String resetToken;
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = &quot;user&quot;)
+	private Set&lt;Bookmark&gt; bookmarks;
+	/**
+	 * @return the id
+	 */
+	public long getId() {
+<span class="nc" id="L34">		return id;</span>
+	}
+
+	/**
+	 * @param id
+	 *            the id to set
+	 */
+	public void setId(long id) {
+<span class="nc" id="L42">		this.id = id;</span>
+<span class="nc" id="L43">	}</span>
+
+	/**
+	 * @return the username
+	 */
+	public String getUsername() {
+<span class="nc" id="L49">		return username;</span>
+	}
+
+	/**
+	 * @param username
+	 *            the username to set
+	 */
+	public void setUsername(String username) {
+<span class="nc" id="L57">		this.username = username;</span>
+<span class="nc" id="L58">	}</span>
+
+	/**
+	 * @return the password
+	 */
+	public String getPassword() {
+<span class="nc" id="L64">		return password;</span>
+	}
+
+	/**
+	 * @param password
+	 *            the password to set
+	 */
+	public void setPassword(String password) {
+<span class="nc" id="L72">		this.password = password;</span>
+<span class="nc" id="L73">	}</span>
+
+	/**
+	 * @return the confpassword
+	 */
+	public String getConfpassword() {
+<span class="nc" id="L79">		return confpassword;</span>
+	}
+
+	/**
+	 * @param confpassword the confpassword to set
+	 */
+	public void setConfpassword(String confpassword) {
+<span class="nc" id="L86">		this.confpassword = confpassword;</span>
+<span class="nc" id="L87">	}</span>
+
+	/**
+	 * @return the email
+	 */
+	public String getEmail() {
+<span class="nc" id="L93">		return email;</span>
+	}
+
+	/**
+	 * @param email the email to set
+	 */
+	public void setEmail(String email) {
+<span class="nc" id="L100">		this.email = email;</span>
+<span class="nc" id="L101">	}</span>
+
+	/**
+	 * @return the resetToken
+	 */
+	public String getResetToken() {
+<span class="nc" id="L107">		return resetToken;</span>
+	}
+
+	/**
+	 * @param resetToken the resetToken to set
+	 */
+	public void setResetToken(String resetToken) {
+<span class="nc" id="L114">		this.resetToken = resetToken;</span>
+<span class="nc" id="L115">	}</span>
+	
+	
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

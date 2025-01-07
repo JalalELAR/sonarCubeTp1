@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SynthesisCriteria.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">flight-app-back</a> &gt; <a href="index.source.html" class="el_package">flight.models</a> &gt; <span class="el_source">SynthesisCriteria.java</span></div><h1>SynthesisCriteria.java</h1><pre class="source lang-java linenums">package flight.models;
+
+import java.time.LocalDate;
+
+public class SynthesisCriteria {
+	private LocalDate departureDateMin;
+	private LocalDate departureDateMax;
+	/**
+	 * @return the departureDateMin
+	 */
+	public LocalDate getDepartureDateMin() {
+<span class="nc" id="L12">		return departureDateMin;</span>
+	}
+	/**
+	 * @param departureDateMin the departureDateMin to set
+	 */
+	public void setDepartureDateMin(LocalDate departureDateMin) {
+<span class="nc" id="L18">		this.departureDateMin = departureDateMin;</span>
+<span class="nc" id="L19">	}</span>
+	/**
+	 * @return the departureDateMax
+	 */
+	public LocalDate getDepartureDateMax() {
+<span class="nc" id="L24">		return departureDateMax;</span>
+	}
+	/**
+	 * @param departureDateMax the departureDateMax to set
+	 */
+	public void setDepartureDateMax(LocalDate departureDateMax) {
+<span class="nc" id="L30">		this.departureDateMax = departureDateMax;</span>
+<span class="nc" id="L31">	}</span>
+	/**
+	 * @param departureDateMin
+	 * @param departureDateMax
+	 */
+	public SynthesisCriteria(LocalDate departureDateMin, LocalDate departureDateMax) {
+<span class="nc" id="L37">		super();</span>
+<span class="nc" id="L38">		this.departureDateMin = departureDateMin;</span>
+<span class="nc" id="L39">		this.departureDateMax = departureDateMax;</span>
+<span class="nc" id="L40">	}</span>
+	/**
+	 * 
+	 */
+	public SynthesisCriteria() {
+<span class="nc" id="L45">		super();</span>
+		// TODO Auto-generated constructor stub
+<span class="nc" id="L47">	}</span>
+	
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

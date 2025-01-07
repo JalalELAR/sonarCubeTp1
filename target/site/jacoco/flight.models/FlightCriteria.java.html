@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FlightCriteria.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">flight-app-back</a> &gt; <a href="index.source.html" class="el_package">flight.models</a> &gt; <span class="el_source">FlightCriteria.java</span></div><h1>FlightCriteria.java</h1><pre class="source lang-java linenums">package flight.models;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+import javax.persistence.Embeddable;
+
+import flight.enumerations.CompanyName;
+import flight.enumerations.FlightType;
+import flight.enumerations.TravelType;
+@Embeddable
+public class FlightCriteria {
+	private CompanyName company;
+	private FlightType flightType;
+	private TravelType travelType;
+	private String departureLocation;
+	private String arrivalLocation;
+	private Double fareMin;
+	private Double fareMax;
+	private LocalTime flightDurationMin;
+	private LocalTime flightDurationMax;
+	private String aircraftType;
+	private LocalDate departureDateMin;
+	private LocalDate arrivalDateMin;
+	private LocalDate backDateMin;
+	private LocalTime departureTimeMin;
+	private LocalTime arrivalTimeMin;
+	private LocalTime backTimeMin;
+	private LocalDate departureDateMax;
+	private LocalDate arrivalDateMax;
+	private LocalDate backDateMax;
+	private LocalTime departureTimeMax;
+	private LocalTime arrivalTimeMax;
+	private LocalTime backTimeMax;
+	private LocalTime connectionDurationMin;
+	private LocalTime connectionDurationMax;
+
+	/**
+	 * @return the company
+	 */
+	public CompanyName getCompany() {
+<span class="nc" id="L42">		return company;</span>
+	}
+
+	/**
+	 * @param company
+	 *            the company to set
+	 */
+	public void setCompany(CompanyName company) {
+<span class="nc" id="L50">		this.company = company;</span>
+<span class="nc" id="L51">	}</span>
+
+	/**
+	 * @return the flightType
+	 */
+	public FlightType getFlightType() {
+<span class="nc" id="L57">		return flightType;</span>
+	}
+
+	/**
+	 * @param flightType
+	 *            the flightType to set
+	 */
+	public void setFlightType(FlightType flightType) {
+<span class="nc" id="L65">		this.flightType = flightType;</span>
+<span class="nc" id="L66">	}</span>
+
+	/**
+	 * @return the travelType
+	 */
+	public TravelType getTravelType() {
+<span class="nc" id="L72">		return travelType;</span>
+	}
+
+	/**
+	 * @param travelType
+	 *            the travelType to set
+	 */
+	public void setTravelType(TravelType travelType) {
+<span class="nc" id="L80">		this.travelType = travelType;</span>
+<span class="nc" id="L81">	}</span>
+
+	/**
+	 * @return the departureLocation
+	 */
+	public String getDepartureLocation() {
+<span class="nc" id="L87">		return departureLocation;</span>
+	}
+
+	/**
+	 * @param departureLocation
+	 *            the departureLocation to set
+	 */
+	public void setDepartureLocation(String departureLocation) {
+<span class="nc" id="L95">		this.departureLocation = departureLocation;</span>
+<span class="nc" id="L96">	}</span>
+
+	/**
+	 * @return the arrivalLocation
+	 */
+	public String getArrivalLocation() {
+<span class="nc" id="L102">		return arrivalLocation;</span>
+	}
+
+	/**
+	 * @param arrivalLocation
+	 *            the arrivalLocation to set
+	 */
+	public void setArrivalLocation(String arrivalLocation) {
+<span class="nc" id="L110">		this.arrivalLocation = arrivalLocation;</span>
+<span class="nc" id="L111">	}</span>
+
+	/**
+	 * @return the fareMin
+	 */
+	public Double getFareMin() {
+<span class="nc" id="L117">		return fareMin;</span>
+	}
+
+	/**
+	 * @param fareMin
+	 *            the fareMin to set
+	 */
+	public void setFareMin(double fareMin) {
+<span class="nc" id="L125">		this.fareMin = fareMin;</span>
+<span class="nc" id="L126">	}</span>
+
+	/**
+	 * @return the fareMax
+	 */
+	public Double getFareMax() {
+<span class="nc" id="L132">		return fareMax;</span>
+	}
+
+	/**
+	 * @param fareMax
+	 *            the fareMax to set
+	 */
+	public void setFareMax(double fareMax) {
+<span class="nc" id="L140">		this.fareMax = fareMax;</span>
+<span class="nc" id="L141">	}</span>
+
+	/**
+	 * @return the flightDurationMin
+	 */
+	public LocalTime getFlightDurationMin() {
+<span class="nc" id="L147">		return flightDurationMin;</span>
+	}
+
+	/**
+	 * @param flightDurationMin
+	 *            the flightDurationMin to set
+	 */
+	public void setFlightDurationMin(LocalTime flightDurationMin) {
+<span class="nc" id="L155">		this.flightDurationMin = flightDurationMin;</span>
+<span class="nc" id="L156">	}</span>
+
+	/**
+	 * @return the flightDurationMax
+	 */
+	public LocalTime getFlightDurationMax() {
+<span class="nc" id="L162">		return flightDurationMax;</span>
+	}
+
+	/**
+	 * @param flightDurationMax
+	 *            the flightDurationMax to set
+	 */
+	public void setFlightDurationMax(LocalTime flightDurationMax) {
+<span class="nc" id="L170">		this.flightDurationMax = flightDurationMax;</span>
+<span class="nc" id="L171">	}</span>
+
+	/**
+	 * @return the aircraftType
+	 */
+	public String getAircraftType() {
+<span class="nc" id="L177">		return aircraftType;</span>
+	}
+
+	/**
+	 * @param aircraftType
+	 *            the aircraftType to set
+	 */
+	public void setAircraftType(String aircraftType) {
+<span class="nc" id="L185">		this.aircraftType = aircraftType;</span>
+<span class="nc" id="L186">	}</span>
+
+	/**
+	 * @return the departureDateMin
+	 */
+	public LocalDate getDepartureDateMin() {
+<span class="nc" id="L192">		return departureDateMin;</span>
+	}
+
+	/**
+	 * @param departureDateMin
+	 *            the departureDateMin to set
+	 */
+	public void setDepartureDateMin(LocalDate departureDateMin) {
+<span class="nc" id="L200">		this.departureDateMin = departureDateMin;</span>
+<span class="nc" id="L201">	}</span>
+
+	/**
+	 * @return the arrivalDateMin
+	 */
+	public LocalDate getArrivalDateMin() {
+<span class="nc" id="L207">		return arrivalDateMin;</span>
+	}
+
+	/**
+	 * @param arrivalDateMin
+	 *            the arrivalDateMin to set
+	 */
+	public void setArrivalDateMin(LocalDate arrivalDateMin) {
+<span class="nc" id="L215">		this.arrivalDateMin = arrivalDateMin;</span>
+<span class="nc" id="L216">	}</span>
+
+	/**
+	 * @return the backDateMin
+	 */
+	public LocalDate getBackDateMin() {
+<span class="nc" id="L222">		return backDateMin;</span>
+	}
+
+	/**
+	 * @param backDateMin
+	 *            the backDateMin to set
+	 */
+	public void setBackDateMin(LocalDate backDateMin) {
+<span class="nc" id="L230">		this.backDateMin = backDateMin;</span>
+<span class="nc" id="L231">	}</span>
+
+	/**
+	 * @return the departureTimeMin
+	 */
+	public LocalTime getDepartureTimeMin() {
+<span class="nc" id="L237">		return departureTimeMin;</span>
+	}
+
+	/**
+	 * @param departureTimeMin
+	 *            the departureTimeMin to set
+	 */
+	public void setDepartureTimeMin(LocalTime departureTimeMin) {
+<span class="nc" id="L245">		this.departureTimeMin = departureTimeMin;</span>
+<span class="nc" id="L246">	}</span>
+
+	/**
+	 * @return the arrivalTimeMin
+	 */
+	public LocalTime getArrivalTimeMin() {
+<span class="nc" id="L252">		return arrivalTimeMin;</span>
+	}
+
+	/**
+	 * @param arrivalTimeMin
+	 *            the arrivalTimeMin to set
+	 */
+	public void setArrivalTimeMin(LocalTime arrivalTimeMin) {
+<span class="nc" id="L260">		this.arrivalTimeMin = arrivalTimeMin;</span>
+<span class="nc" id="L261">	}</span>
+
+	/**
+	 * @return the backTimeMin
+	 */
+	public LocalTime getBackTimeMin() {
+<span class="nc" id="L267">		return backTimeMin;</span>
+	}
+
+	/**
+	 * @param backTimeMin
+	 *            the backTimeMin to set
+	 */
+	public void setBackTimeMin(LocalTime backTimeMin) {
+<span class="nc" id="L275">		this.backTimeMin = backTimeMin;</span>
+<span class="nc" id="L276">	}</span>
+
+	/**
+	 * @return the departureDateMax
+	 */
+	public LocalDate getDepartureDateMax() {
+<span class="nc" id="L282">		return departureDateMax;</span>
+	}
+
+	/**
+	 * @param departureDateMax
+	 *            the departureDateMax to set
+	 */
+	public void setDepartureDateMax(LocalDate departureDateMax) {
+<span class="nc" id="L290">		this.departureDateMax = departureDateMax;</span>
+<span class="nc" id="L291">	}</span>
+
+	/**
+	 * @return the arrivalDateMax
+	 */
+	public LocalDate getArrivalDateMax() {
+<span class="nc" id="L297">		return arrivalDateMax;</span>
+	}
+
+	/**
+	 * @param arrivalDateMax
+	 *            the arrivalDateMax to set
+	 */
+	public void setArrivalDateMax(LocalDate arrivalDateMax) {
+<span class="nc" id="L305">		this.arrivalDateMax = arrivalDateMax;</span>
+<span class="nc" id="L306">	}</span>
+
+	/**
+	 * @return the backDateMax
+	 */
+	public LocalDate getBackDateMax() {
+<span class="nc" id="L312">		return backDateMax;</span>
+	}
+
+	/**
+	 * @param backDateMax
+	 *            the backDateMax to set
+	 */
+	public void setBackDateMax(LocalDate backDateMax) {
+<span class="nc" id="L320">		this.backDateMax = backDateMax;</span>
+<span class="nc" id="L321">	}</span>
+
+	/**
+	 * @return the departureTimeMax
+	 */
+	public LocalTime getDepartureTimeMax() {
+<span class="nc" id="L327">		return departureTimeMax;</span>
+	}
+
+	/**
+	 * @param departureTimeMax
+	 *            the departureTimeMax to set
+	 */
+	public void setDepartureTimeMax(LocalTime departureTimeMax) {
+<span class="nc" id="L335">		this.departureTimeMax = departureTimeMax;</span>
+<span class="nc" id="L336">	}</span>
+
+	/**
+	 * @return the arrivalTimeMax
+	 */
+	public LocalTime getArrivalTimeMax() {
+<span class="nc" id="L342">		return arrivalTimeMax;</span>
+	}
+
+	/**
+	 * @param arrivalTimeMax
+	 *            the arrivalTimeMax to set
+	 */
+	public void setArrivalTimeMax(LocalTime arrivalTimeMax) {
+<span class="nc" id="L350">		this.arrivalTimeMax = arrivalTimeMax;</span>
+<span class="nc" id="L351">	}</span>
+
+	/**
+	 * @return the backTimeMax
+	 */
+	public LocalTime getBackTimeMax() {
+<span class="nc" id="L357">		return backTimeMax;</span>
+	}
+
+	/**
+	 * @param backTimeMax
+	 *            the backTimeMax to set
+	 */
+	public void setBackTimeMax(LocalTime backTimeMax) {
+<span class="nc" id="L365">		this.backTimeMax = backTimeMax;</span>
+<span class="nc" id="L366">	}</span>
+
+	/**
+	 * @return the connectionDurationMin
+	 */
+	public LocalTime getConnectionDurationMin() {
+<span class="nc" id="L372">		return connectionDurationMin;</span>
+	}
+
+	/**
+	 * @param connectionDurationMin
+	 *            the connectionDurationMin to set
+	 */
+	public void setConnectionDurationMin(LocalTime connectionDurationMin) {
+<span class="nc" id="L380">		this.connectionDurationMin = connectionDurationMin;</span>
+<span class="nc" id="L381">	}</span>
+
+	/**
+	 * @return the connectionDurationMax
+	 */
+	public LocalTime getConnectionDurationMax() {
+<span class="nc" id="L387">		return connectionDurationMax;</span>
+	}
+
+	/**
+	 * @param connectionDurationMax
+	 *            the connectionDurationMax to set
+	 */
+	public void setConnectionDurationMax(LocalTime connectionDurationMax) {
+<span class="nc" id="L395">		this.connectionDurationMax = connectionDurationMax;</span>
+<span class="nc" id="L396">	}</span>
+
+	/**
+	 * @param company
+	 * @param flightType
+	 * @param travelType
+	 * @param departureLocation
+	 * @param arrivalLocation
+	 * @param fareMin
+	 * @param fareMax
+	 * @param flightDurationMin
+	 * @param flightDurationMax
+	 * @param aircraftType
+	 * @param departureDateMin
+	 * @param arrivalDateMin
+	 * @param backDateMin
+	 * @param departureTimeMin
+	 * @param arrivalTimeMin
+	 * @param backTimeMin
+	 * @param departureDateMax
+	 * @param arrivalDateMax
+	 * @param backDateMax
+	 * @param departureTimeMax
+	 * @param arrivalTimeMax
+	 * @param backTimeMax
+	 * @param connectionDurationMin
+	 * @param connectionDurationMax
+	 */
+	public FlightCriteria(CompanyName company, FlightType flightType, TravelType travelType, String departureLocation,
+			String arrivalLocation, double fareMin, double fareMax, LocalTime flightDurationMin,
+			LocalTime flightDurationMax, String aircraftType, LocalDate departureDateMin,
+			LocalDate arrivalDateMin, LocalDate backDateMin, LocalTime departureTimeMin,
+			LocalTime arrivalTimeMin, LocalTime backTimeMin, LocalDate departureDateMax,
+			LocalDate arrivalDateMax, LocalDate backDateMax, LocalTime departureTimeMax,
+			LocalTime arrivalTimeMax, LocalTime backTimeMax, LocalTime connectionDurationMin,
+			LocalTime connectionDurationMax) {
+<span class="nc" id="L432">		super();</span>
+<span class="nc" id="L433">		this.company = company;</span>
+<span class="nc" id="L434">		this.flightType = flightType;</span>
+<span class="nc" id="L435">		this.travelType = travelType;</span>
+<span class="nc" id="L436">		this.departureLocation = departureLocation;</span>
+<span class="nc" id="L437">		this.arrivalLocation = arrivalLocation;</span>
+<span class="nc" id="L438">		this.fareMin = fareMin;</span>
+<span class="nc" id="L439">		this.fareMax = fareMax;</span>
+<span class="nc" id="L440">		this.flightDurationMin = flightDurationMin;</span>
+<span class="nc" id="L441">		this.flightDurationMax = flightDurationMax;</span>
+<span class="nc" id="L442">		this.aircraftType = aircraftType;</span>
+<span class="nc" id="L443">		this.departureDateMin = departureDateMin;</span>
+<span class="nc" id="L444">		this.arrivalDateMin = arrivalDateMin;</span>
+<span class="nc" id="L445">		this.backDateMin = backDateMin;</span>
+<span class="nc" id="L446">		this.departureTimeMin = departureTimeMin;</span>
+<span class="nc" id="L447">		this.arrivalTimeMin = arrivalTimeMin;</span>
+<span class="nc" id="L448">		this.backTimeMin = backTimeMin;</span>
+<span class="nc" id="L449">		this.departureDateMax = departureDateMax;</span>
+<span class="nc" id="L450">		this.arrivalDateMax = arrivalDateMax;</span>
+<span class="nc" id="L451">		this.backDateMax = backDateMax;</span>
+<span class="nc" id="L452">		this.departureTimeMax = departureTimeMax;</span>
+<span class="nc" id="L453">		this.arrivalTimeMax = arrivalTimeMax;</span>
+<span class="nc" id="L454">		this.backTimeMax = backTimeMax;</span>
+<span class="nc" id="L455">		this.connectionDurationMin = connectionDurationMin;</span>
+<span class="nc" id="L456">		this.connectionDurationMax = connectionDurationMax;</span>
+<span class="nc" id="L457">	}</span>
+
+	/**
+	 * 
+	 */
+	public FlightCriteria() {
+<span class="fc" id="L463">		super();</span>
+		// TODO Auto-generated constructor stub
+<span class="fc" id="L465">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
